@@ -26,25 +26,25 @@ public class Paciente {
         this.idade = idade;
     }
 
-    public int frequenciaMaxima(){
+    public int frequenciaMax(){
         return 220 - idade;
     }
     
     public double frequenciaAlvoMinima(){
-        double minima = frequenciaMaxima();
-        double alvo = minima * 0.5;
-        return alvo;
+        double minima = frequenciaMax();
+        double alvoMinima = minima * 0.5;
+        return alvoMinima;
     }
 
     public double frequenciaAlvoMaxima(){
-        double maxima = frequenciaMaxima();
+        double maxima = frequenciaMax();
         double alvoMaxima = maxima * 0.85;
         return alvoMaxima;
     }
 
     @Override
     public String toString() {
-        return "Nome: " + getNome() + "\nIdade: " + getIdade() + "\nFrequencia Máxima: " + frequenciaMaxima() + "\nFrequencia Alvo: " + frequenciaAlvoMinima() + "a " + frequenciaAlvoMaxima(); 
+        return "Nome: " + getNome() + "\nIdade: " + getIdade() + "\nFrequencia Máxima: " + frequenciaMax() + "\nFrequencia Alvo: " + frequenciaAlvoMinima() + "a " + frequenciaAlvoMaxima(); 
     }
 
 }
