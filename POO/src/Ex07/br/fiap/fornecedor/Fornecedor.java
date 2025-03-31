@@ -1,7 +1,7 @@
-package Ex07;
+package Ex07.br.fiap.fornecedor;
 
 public class Fornecedor {
-    private String nome;
+    public String nome;
     private long cnpj;
 
     public Fornecedor(String nome, long cnpj) {

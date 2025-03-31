@@ -1,4 +1,6 @@
-package Ex07;
+package Ex07.br.fiap.main;
+
+import Ex07.br.fiap.fornecedor.Fornecedor;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,5 +9,6 @@ public class Main {
         System.out.println(fornecedor.getNome());
         fornecedor.setNome("rob");
         System.out.println(fornecedor.getNome());
+
     }
 }

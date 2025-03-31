@@ -1,4 +1,6 @@
-package Ex07;
+package Ex07.br.fiap.produto;
+
+import Ex07.br.fiap.fornecedor.Fornecedor;
 
 public class Produto {
     private String nome;
