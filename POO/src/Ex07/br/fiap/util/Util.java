@@ -17,7 +17,7 @@ public class Util {
 
     public void menu() {
     int opcao;
-    String aux = "1. Cadastrar pesquisar\n2. Pesquisar procurar\n3. Pesquisar fornecedor\n4. Finalizar";
+    String aux = "1. Cadastrar produto\n2. Pesquisar produto\n3. Pesquisar fornecedor\n4. Finalizar";
 
     while (true){
         opcao = parseInt(showInputDialog(aux));
@@ -33,7 +33,7 @@ public class Util {
                 pesquisarProduto();
                 break;
             case 3:
-                pesquisarFornecedor();
+                pesquisar();
                 break;
             default:
                 showMessageDialog(null, "Opção inválida");
@@ -48,15 +48,29 @@ public class Util {
         Fornecedor fornecedor = pesquisarFornecedor();
 
         if(fornecedor == null){
-            cadastrarFornecedor();
+            fornecedor = cadastrarFornecedor();
         }
+        nome = showInputDialog("Nome do produto");
+        valorUnitario = parseDouble(showInputDialog("Valor unitário"));
+        qtdEstoque = parseInt(showInputDialog("Quantidade em estoque"));
+        produto[idxProduto] = new Produto(nome,valorUnitario, qtdEstoque, fornecedor);
+        idxProduto++;
     }
 
-    private void cadastrarFornecedor() {
+    private Fornecedor cadastrarFornecedor() {
         long cnpj = parseLong(showInputDialog("CNPJ do fornecedor"));
         String nome = showInputDialog("Fornecedor");
         fornecedor[idxFornecedor] = new Fornecedor(nome, cnpj);
         idxFornecedor++;
+        return fornecedor[idxFornecedor-1];
+    }
+
+    private void pesquisar() {
+        Fornecedor fornecedor = pesquisarFornecedor();
+        if (fornecedor != null){
+            showMessageDialog(null, fornecedor.getCnpj() + "\n" +
+                    fornecedor.getNome());
+        }
     }
 
     private Fornecedor pesquisarFornecedor() {
@@ -72,6 +86,18 @@ public class Util {
 
 
     private void pesquisarProduto() {
+        String aux = "Produto não encontrado";
+        String nome = showInputDialog("Nome do Produto");
+        for(int i = 0; i  < idxProduto; i++){
+            if(produto[i].getNome().equalsIgnoreCase(nome)){
+                aux = "";
+                aux += "Nome do Produto: " + nome + "\n";
+                aux += "Valor unitário: " + produto[i].getValor() + "\n";
+                aux += "Fornecedor: " + produto[i].getFornecedor().getNome() + "\n";
+                break;
+            }
+        }
+        showMessageDialog(null, aux);
     }
 
 }
