@@ -1,22 +1,22 @@
 package Ex08;
 
-public class EmpregadoHorista extends Empregado{
+public class EmpregadoHorista extends Empregado {
+    int totalDeHorasTrabalhadas;
+    double valorDaHoraTrabalhada;
 
-    int totalHorasTrablhadas;
-    double valorHoraTrabalhada;
-
-    public double calcularSalario(){
-//        return totalHorasTrablhadas * valorHoraTrabalhada;
-        return 2;
+    public EmpregadoHorista(long matricula, String nome, int totalDeHorasTrabalhadas, double valorDaHoraTrabalhada) {
+        super(matricula, nome);
+        this.totalDeHorasTrabalhadas = totalDeHorasTrabalhadas;
+        this.valorDaHoraTrabalhada = valorDaHoraTrabalhada;
     }
 
     @Override
     public String toString() {
-        return "EmpregadoComissionado{" +
-                "totalHorasTrablhadas = " + totalHorasTrablhadas +
-                ", valorHoraTrabalhada = " + valorHoraTrabalhada +
-                ", matricula = " + matricula +
-                ", nome = '" + nome + '\'' +
-                '}';
+        return super.toString() + " -- " + totalDeHorasTrabalhadas + " -- " + valorDaHoraTrabalhada;
     }
+
+    public double calcularSalario() {
+        return totalDeHorasTrabalhadas * valorDaHoraTrabalhada;
+    }
+
 }
