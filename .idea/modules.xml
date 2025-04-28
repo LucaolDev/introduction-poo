@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/POO.iml" filepath="$PROJECT_DIR$/POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex01/Ex01.iml" filepath="$PROJECT_DIR$/Ex01/Ex01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex02/Ex02.iml" filepath="$PROJECT_DIR$/Ex02/Ex02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex03/Ex03.iml" filepath="$PROJECT_DIR$/Ex03/Ex03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex04/Ex04.iml" filepath="$PROJECT_DIR$/Ex04/Ex04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex05/Ex05.iml" filepath="$PROJECT_DIR$/Ex05/Ex05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex06/Ex06.iml" filepath="$PROJECT_DIR$/Ex06/Ex06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex07/Ex07.iml" filepath="$PROJECT_DIR$/Ex07/Ex07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex08/Ex08.iml" filepath="$PROJECT_DIR$/Ex08/Ex08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex09/Ex09.iml" filepath="$PROJECT_DIR$/Ex09/Ex09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/semestre-3.iml" filepath="$PROJECT_DIR$/semestre-3.iml" />
     </modules>
   </component>
 </project>
