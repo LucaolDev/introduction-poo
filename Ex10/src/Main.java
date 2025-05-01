@@ -22,6 +22,10 @@ public class Main {
             System.out.println(f.getClass());
             System.out.println(f);
             System.out.println("área = " + f.calcularArea());
+            if(f instanceof Cilindro){
+                System.out.println("Volume " + ((Cilindro) f).calcularVolume());
+
+            }
             System.out.println("---------------------------");
         }
 
