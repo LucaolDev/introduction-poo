@@ -37,10 +37,8 @@ public abstract class Forma {
 
     @Override
     public String toString() {
-        return "Forma{" +
-                "cordenadaX=" + cordenadaX +
-                ", cordenadaY=" + cordenadaY +
-                ", raio=" + raio +
-                '}';
+        return  "cordenadaX = " + cordenadaX +
+                ", cordenadaY = " + cordenadaY +
+                ", raio = " + raio;
     }
 }

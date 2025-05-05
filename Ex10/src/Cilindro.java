@@ -1,4 +1,4 @@
-public class Cilindro extends Forma{
+public class Cilindro extends Forma implements Volume{
 
     private Double altura;
 
@@ -9,17 +9,24 @@ public class Cilindro extends Forma{
 
     @Override
     public double calcularArea() {
-        return Math.PI * Math.pow(getRaio(), 2);
+        return 1;
     }
 
-    public Double calcularVolume(){
-        return 0.0;
+    @Override
+    public double calcularVolume() {
+        return -1;
+    }
+
+    public Double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(Double altura) {
+        this.altura = altura;
     }
 
     @Override
     public String toString() {
-        return "Cilindro{" +
-                "altura=" + altura +
-                '}';
+        return "altura = " + altura;
     }
 }

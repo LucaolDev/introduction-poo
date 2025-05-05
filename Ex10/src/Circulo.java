@@ -4,9 +4,8 @@ public class Circulo extends Forma{
         super(cordenadaX, cordenadaY, raio);
     }
 
-    public double calcularArea(){
-        return Math.PI * Math.pow(getRaio(), 2);
+    @Override
+    public double calcularArea() {
+        return 1;
     }
-
-
 }
